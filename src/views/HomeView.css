@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.label {
+    flex: 0 1 auto;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.label::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+}
+
+.content {
+    flex: 1 0 auto;
+    padding: 10px;
+}
+
+.header {
+    padding: 20px;
+    flex-shrink: 0;
+    flex-basis: 250px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 90px auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+
+.header .content-wrapper:nth-child(n+3) {
+    border-bottom: 1px solid black;
+}
+
+.header .content-wrapper .text-field {
+    border-radius: 5px;
+    outline: none;
+    font-size: 24px;
+    background-color: transparent;
+    word-break: break-all;
+}
+
+.header .content-wrapper.comment textarea {
+    resize: none;
+    font-size: 14px;
+}
+
+.music {
+    flex: 0 1 70px;
+    background-color: green;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.main .content-wrapper.tasks {
+    flex-grow: 2;
+}
+
+.main .content-wrapper.timetable {
+    flex-grow: 1;
+}
