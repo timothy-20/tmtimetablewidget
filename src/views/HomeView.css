@@ -62,7 +62,6 @@ body {
     outline: none;
     font-size: 24px;
     background-color: transparent;
-    word-break: break-all;
 }
 
 .header .content-wrapper.comment textarea {
