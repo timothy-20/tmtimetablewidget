@@ -14,6 +14,10 @@
   color: #2c3e50;
 }
 
+img {
+  max-width: 100%;
+}
+
 nav {
   padding: 30px;
 }

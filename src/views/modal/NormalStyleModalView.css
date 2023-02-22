@@ -30,35 +30,40 @@
 }
 
 .modal-header {
-    flex: 0 1 100px;
+    flex: 0 1 80px;
     padding-bottom: 10px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 2fr 1fr;
-    grid-gap: 5px;
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid black;
 }
 
-.modal-header .title {
-    background-color: rebeccapurple;
+.modal-header .title-wrapper {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.modal-header .subtitle {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: rebeccapurple;
+.title-wrapper p {
+    text-align: left;
+    white-space: nowrap;
 }
 
-.modal-header .dismiss {
-    width: 30px;
-    height: 30px;
+.title-wrapper .title {
+    display: block;
+    font-size: 32px;
+}
+
+.title-wrapper .subtitle {
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.modal-header .button-wrapper {
+    flex: 0 1 30px;
+}
+
+.button-wrapper .dismiss {
     background-color: transparent;
-}
-
-.modal-header .dismiss img {
-    width: inherit;
-    height: inherit;
-    object-fit: contain;
 }
 
 .modal-content {
@@ -66,6 +71,16 @@
 }
 
 .modal-footer {
-    flex: 0 1 60px;
+    flex: 0 1 80px;
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
     border-top: 1px solid black;
+}
+
+.modal-footer button {
+    flex-grow: 1;
+    font-size: 16px;
+    border: 1px solid black;
+    background-color: transparent;
 }

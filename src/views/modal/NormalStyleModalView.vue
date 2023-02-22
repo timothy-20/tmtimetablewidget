@@ -3,11 +3,15 @@
     <div class="overlay"></div>
     <div class="modal-wrapper">
       <div class="modal-header">
-        <div class="title"><span>Title</span></div>
-        <button class="dismiss">
-          <img src="@/assets/close.png" alt="close png icon">
-        </button>
-        <div class="subtitle"><span>subtitle</span></div>
+        <div class="title-wrapper">
+          <p class="title">{{ title }}</p>
+          <p class="subtitle">{{ subtitle }}</p>
+        </div>
+        <div class="button-wrapper">
+          <button class="dismiss">
+            <img src="@/assets/close.png" alt="close png icon">
+          </button>
+        </div>
       </div>
 
       <div class="modal-content">
@@ -15,7 +19,8 @@
       </div>
 
       <div class="modal-footer">
-        FOOTER
+        <button class="cancel">CANCEL</button>
+        <button class="confirm">CONFIRM</button>
       </div>
     </div>
   </div>
@@ -23,7 +28,33 @@
 
 <script>
 export default {
-  name: "NormalStyleModalView"
+  name: "NormalStyleModalView",
+  props: {
+    title: {
+      type: String,
+      require: true,
+      default() { return "Title" }
+    },
+    subtitle: {
+      type: String,
+      require: true,
+      default() { return "subtitle" }
+    }
+  },
+  data: function () {
+    return {
+
+    }
+  },
+  methods: {
+    actionDismiss() {
+
+    },
+
+    actionConfirm() {
+
+    }
+  }
 }
 </script>
 
