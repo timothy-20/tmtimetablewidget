@@ -10,6 +10,4 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "@/components/Timetable.css";
-</style>
+<style scoped src="./Timetable.css" />

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container .text-field-wrapper {
+
+}
+
+.container .button-wrapper {
+    background-color: pink;
+}
+
+/*.header-wrapper .task-title {*/
+/*    flex: 1 0 auto;*/
+/*    font-size: 24px;*/
+/*    font-weight: 600;*/
+/*    padding: 5px;*/
+/*}*/
+
+/*input.task-title.text-field:focus {*/
+/*    outline: none !important;*/
+/*    border: 1px solid black;*/
+/*}*/

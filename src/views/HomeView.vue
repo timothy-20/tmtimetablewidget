@@ -38,18 +38,9 @@
 </template>
 
 <script>
-import Tasks from "@/components/Tasks";
-import Timetable from "@/components/Timetable";
-
 export default {
   name: 'HomeView',
-  components: {
-    "tasks": Tasks,
-    "timetable": Timetable
-  }
 }
 </script>
 
-<style scoped>
-@import "@/views/HomeView.css";
-</style>
+<style scoped src="./HomeView.css" />

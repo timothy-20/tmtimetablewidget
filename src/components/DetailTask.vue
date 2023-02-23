@@ -14,13 +14,8 @@
 </template>
 
 <script>
-import CreateTaskModalView from "@/views/modal/CreateTaskModalView";
-
 export default {
   name: "DetailTask",
-  components: {
-    "create-task-modal": CreateTaskModalView
-  },
   data: function () {
     return {
 
@@ -34,6 +29,4 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "@/components/DetailTask.css";
-</style>
+<style scoped src="./DetailTask.css" />

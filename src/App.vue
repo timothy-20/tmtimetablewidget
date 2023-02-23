@@ -14,6 +14,18 @@
   color: #2c3e50;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
 p {
   text-align: left;
   overflow: hidden;

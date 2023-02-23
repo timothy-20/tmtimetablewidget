@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "NormalStyleModalView",
+  name: "NormalStyleModal",
   props: {
     title: {
       type: String,
@@ -58,6 +58,4 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "@/views/modal/NormalStyleModalView.css";
-</style>
+<style scoped src="./NormalStyleModal.css" />

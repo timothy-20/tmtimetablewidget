@@ -5,16 +5,9 @@
 </template>
 
 <script>
-import DetailTask from "@/components/DetailTask";
-
 export default {
   name: "Tasks",
-  components: {
-    "detail-task": DetailTask,
-  }
 }
 </script>
 
-<style scoped>
-@import "@/components/Tasks.css";
-</style>
+<style scoped src="./Tasks.css" />
