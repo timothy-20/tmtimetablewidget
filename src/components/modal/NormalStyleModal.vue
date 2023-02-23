@@ -8,9 +8,7 @@
           <div class="subtitle"><p>{{ subtitle }}</p></div>
         </div>
         <div class="button-wrapper">
-          <button class="dismiss" v-on:click="actionDismiss">
-            <img src="@/assets/close.png" alt="close png icon">
-          </button>
+          <button class="dismiss" v-on:click="actionDismiss" />
         </div>
       </div>
 

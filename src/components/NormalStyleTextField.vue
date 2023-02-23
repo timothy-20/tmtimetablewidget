@@ -1,22 +1,20 @@
 <template>
-  <div class="container">
-    <div class="text-field-wrapper">
-      <button class="title-label"
-              v-show="!isTextFieldEnabled"
-              v-on:click="focusTextField" >
-        <p>{{ taskTitle }}</p>
-      </button>
-      <input class="title-text-field"
-             type="text"
-             ref="taskTitleTextField"
-             v-show="isTextFieldEnabled"
-             v-on:blur="blurTextField"
-      />
-    </div>
+  <div class="normal-style-text-field-container">
+    <button class="text-field"
+            v-show="!isTextFieldEnabled"
+            v-on:click="focusTextField" >
+      <p>{{ taskTitle }}</p>
+    </button>
+    <input class="text-field"
+           type="text"
+           ref="taskTitleTextField"
+           v-show="isTextFieldEnabled"
+           v-on:blur="blurTextField"
+    />
 
     <div class="button-wrapper">
-      <button class="cancel">X</button>
-      <button class="confirm">O</button>
+      <button class="cancel" />
+      <button class="confirm" />
     </div>
   </div>
 </template>
