@@ -14,6 +14,17 @@
   color: #2c3e50;
 }
 
+p {
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+button {
+  background-color: transparent;
+}
+
 img {
   max-width: 100%;
 }

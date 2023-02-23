@@ -1,14 +1,14 @@
 <template>
-  <div class="modal-container">
+  <div class="normal-style-modal-container">
     <div class="overlay"></div>
     <div class="modal-wrapper">
       <div class="modal-header">
         <div class="title-wrapper">
-          <p class="title">{{ title }}</p>
-          <p class="subtitle">{{ subtitle }}</p>
+          <div class="title"><p>{{ title }}</p></div>
+          <div class="subtitle"><p>{{ subtitle }}</p></div>
         </div>
         <div class="button-wrapper">
-          <button class="dismiss">
+          <button class="dismiss" v-on:click="actionDismiss">
             <img src="@/assets/close.png" alt="close png icon">
           </button>
         </div>
@@ -19,8 +19,8 @@
       </div>
 
       <div class="modal-footer">
-        <button class="cancel">CANCEL</button>
-        <button class="confirm">CONFIRM</button>
+        <button v-on:click="actionDismiss" class="cancel">CANCEL</button>
+        <button v-on:click="actionConfirm" class="confirm">CONFIRM</button>
       </div>
     </div>
   </div>
@@ -48,11 +48,11 @@ export default {
   },
   methods: {
     actionDismiss() {
-
+      this.$emit('dismiss')
     },
 
     actionConfirm() {
-
+      this.$emit('confirm')
     }
   }
 }

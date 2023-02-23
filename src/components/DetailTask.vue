@@ -9,17 +9,17 @@
       </div>
     </div>
 
-    <normal-style-modal />
+    <create-task-modal />
   </div>
 </template>
 
 <script>
-import NormalStyleModalView from "@/views/modal/NormalStyleModalView";
+import CreateTaskModalView from "@/views/modal/CreateTaskModalView";
 
 export default {
   name: "DetailTask",
   components: {
-    "normal-style-modal": NormalStyleModalView
+    "create-task-modal": CreateTaskModalView
   },
   data: function () {
     return {
@@ -35,38 +35,5 @@ export default {
 </script>
 
 <style scoped>
-.detail-task-container {
-
-}
-
-.task-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  border-bottom: 1px solid black;
-}
-
-.task-label {
-  flex: 0 1 150px;
-  border-right: 1px solid black;
-  padding: 8px;
-}
-
-.task-label input {
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-overflow: ellipsis;
-  background-color: transparent;
-}
-
-.task-content {
-  flex: 1 0 auto;
-}
-
-.task-content .add-task {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-}
+@import "@/components/DetailTask.css";
 </style>
