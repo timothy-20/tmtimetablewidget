@@ -33,34 +33,34 @@
     flex: 0 1 80px;
     padding-bottom: 10px;
     display: flex;
+    flex-flow: column wrap;
     justify-content: space-between;
     border-bottom: 1px solid black;
 }
 
 .modal-header .title-wrapper {
-    max-width: 600px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .title-wrapper .title {
+    flex: 1 0 auto;
     font-size: 32px;
+    /*background-color: green;*/
 }
 
-.title-wrapper .subtitle {
-    font-size: 16px;
-}
-
-.modal-header .button-wrapper {
-    flex: 0 1 30px;
-}
-
-.button-wrapper .dismiss {
-    width: 100%;
-    height: 100%;
-    background-color: rebeccapurple;
+.title-wrapper button.dismiss {
+    flex: 0 1 50px;
     background-repeat: no-repeat;
     background-image: url("@/assets/close.svg");
-    background-size: contain;
+    background-size: cover;
+    /*background-color: blue;*/
+}
 
+.modal-header .subtitle {
+    font-size: 16px;
+    /*background-color: rebeccapurple;*/
 }
 
 .modal-content {
