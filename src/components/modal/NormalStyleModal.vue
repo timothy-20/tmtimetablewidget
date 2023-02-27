@@ -5,9 +5,8 @@
       <div class="modal-header">
         <div class="title-wrapper">
           <div class="title"><p>{{ title }}</p></div>
-          <button class="dismiss" v-on:click="actionDismiss" />
+          <div class="subtitle"><p>{{ subtitle }}</p></div>
         </div>
-        <div class="subtitle"><p>{{ subtitle }}</p></div>
       </div>
 
       <div class="modal-content">

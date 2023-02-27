@@ -1,6 +1,6 @@
 <template>
   <div class="normal-style-text-field-container">
-    <button class="text-field"
+    <button class="text-field label"
             v-show="!isTextFieldEnabled"
             v-on:click="focusTextField" >
       <p>{{ taskTitle }}</p>
@@ -12,9 +12,12 @@
            v-on:blur="blurTextField"
     />
 
-    <div class="button-wrapper">
-      <button class="cancel" />
-      <button class="confirm" />
+    <div class="button-wrapper"
+         v-show="isTextFieldEnabled">
+      <button class="cancel"
+              v-on:click="cancelSubmit" />
+      <button class="confirm"
+              v-on:click="confirmSubmit" />
     </div>
   </div>
 </template>
@@ -24,8 +27,8 @@ export default {
   name: "NormalStyleTextField",
   data: function () {
     return {
-      taskTitle: "Task",
-      isTextFieldEnabled: false
+      taskTitle: "",
+      isTextFieldEnabled: false,
     }
   },
   methods: {
@@ -37,10 +40,16 @@ export default {
         this.$refs.taskTitleTextField.value = this.taskTitle
       });
     },
-
     blurTextField() {
+      this.taskTitle = this.$refs.taskTitleTextField.value;
       this.isTextFieldEnabled = false;
-    }
+    },
+    confirmSubmit() {
+      console.log("Confirm text field.");
+    },
+    cancelSubmit() {
+
+    },
   }
 }
 </script>
